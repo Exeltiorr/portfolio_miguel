@@ -1,0 +1,37 @@
+:focus-visible{outline:2px solid var(--gold-light);outline-offset:3px}
+h1,h2,h3{font-family:var(--f-display);font-weight:500;line-height:1.2;color:var(--gold-light)}
+/* ===== .editable-slot — destaque de áreas vazias (documentada no README) ===== */
+.editable-slot{position:relative;border:2px dashed var(--gold);border-radius:4px;background:rgba(212,175,55,.05);animation:pulse 2.4s ease-in-out infinite;padding:1.25rem;color:var(--gold-light)}
+.editable-slot .badge,.badge{position:absolute;top:-.8rem;right:.75rem;background:var(--gold);color:#120c24;font:600 .7rem var(--f-body);letter-spacing:.12em;padding:.2rem .6rem;border-radius:2px}
+@keyframes pulse{0%,100%{opacity:.75;box-shadow:0 0 0 rgba(212,175,55,0)}50%{opacity:1;box-shadow:var(--glow)}}
+/* Slots (light DOM, herdam estes estilos) */
+.slot{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:.4rem;text-align:center;overflow:hidden;width:100%}
+.slot img{width:100%;height:100%;object-fit:cover}
+.slot code{font-size:.75rem;color:var(--silver);word-break:break-all}
+.slot__icon{font-size:2rem}
+.slot--banner{min-height:8rem}
+.frame{position:relative;border:1px solid rgba(212,175,55,.5);padding:.5rem}
+.frame::before,.frame::after{content:"";position:absolute;width:14px;height:14px;border:2px solid var(--gold)}
+.frame::before{top:-4px;left:-4px;border-right:0;border-bottom:0}
+.frame::after{bottom:-4px;right:-4px;border-left:0;border-top:0}
+.card{background:var(--glass);backdrop-filter:blur(8px);border:1px solid rgba(212,175,55,.35);padding:var(--space);transition:box-shadow var(--ease),transform var(--ease)}
+.card:hover{box-shadow:var(--glow);transform:translateY(-3px)}
+.card h3{font-size:1.15rem;margin-bottom:.4rem}
+.card .meta{color:var(--silver);font-size:.85rem;letter-spacing:.1em;text-transform:uppercase}
+.section-header{text-align:center;margin-bottom:calc(var(--space)*2)}
+.section-header .eyebrow{font:500 .8rem var(--f-body);letter-spacing:.3em;text-transform:uppercase;color:var(--silver)}
+.section-header h2{font-size:clamp(1.8rem,4vw,3rem)}
+.divider{height:1px;margin-inline:auto;width:min(60%,30rem);background:linear-gradient(90deg,transparent,var(--gold),transparent);position:relative}
+.divider::after{content:"";position:absolute;left:50%;top:-5px;width:10px;height:10px;background:var(--gold);transform:translateX(-50%) rotate(45deg)}
+.btn{display:inline-block;border:1px solid var(--gold);padding:.8rem 2rem;font-family:var(--f-display);letter-spacing:.15em;color:var(--gold-light);transition:var(--ease)}
+.btn:hover{background:var(--gold);color:#120c24;box-shadow:var(--glow)}
+.nav__logo{font-family:var(--f-display);color:var(--gold-light);letter-spacing:.15em}
+.nav__list a{display:block;padding:.4rem 0;color:var(--silver);transition:color var(--ease)}
+.nav__list a:hover,.nav__list a.is-active{color:var(--gold-light)}
+.nav__toggle{font-size:1.5rem;color:var(--gold-light)}
+.tags{display:flex;flex-wrap:wrap;gap:.6rem;align-content:flex-start;align-items:flex-start}
+.tag{border:1px solid var(--silver);padding:.25rem .9rem;border-radius:99px;font-size:.9rem}
+.bar{height:6px;background:rgba(255,255,255,.1);margin-top:.3rem}
+.bar span{display:block;height:100%;background:linear-gradient(90deg,var(--gold),var(--gold-light))}
+.reveal{opacity:0;transform:translateY(16px);transition:opacity .6s ease,transform .6s ease}
+.reveal.is-visible{opacity:1;transform:none}

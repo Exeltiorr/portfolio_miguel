@@ -1,0 +1,10 @@
+/* DESIGN TOKENS — altere aqui para personalizar cores/fontes */
+:root{
+  --bg:#07060f; --bg-2:#120c24; --violet:#2a1650;
+  --gold:#d4af37; --gold-light:#f3d98b; --silver:#c9ccd6;
+  --text:#ece9f5; --muted:#b4b0c8;
+  --glass:rgba(22,15,44,.55); --glow:0 0 24px rgba(212,175,55,.35);
+  --f-display:'Cinzel',Georgia,serif; --f-accent:'Cormorant Garamond',Georgia,serif; --f-body:'Inter',system-ui,sans-serif;
+  --space:clamp(1rem,3vw,2rem); --section:clamp(4rem,10vw,8rem);
+  --ease:.4s ease; --max:72rem;
+}

@@ -1,0 +1,14 @@
+.hero{min-height:100svh;display:grid;place-items:center;text-align:center;padding:7rem var(--space) 4rem;position:relative;z-index:1}
+.hero h1{font-size:clamp(2.4rem,8vw,5.5rem);letter-spacing:.08em;background:linear-gradient(180deg,#fff,var(--gold-light) 50%,var(--gold));-webkit-background-clip:text;background-clip:text;color:transparent}
+.hero p{font:italic 500 clamp(1.2rem,3vw,1.8rem) var(--f-accent);color:var(--silver);margin:1rem 0 2rem}
+.hero photo-slot{max-width:12rem;margin:0 auto 1.5rem;border-radius:50%}
+.about__text{min-height:12rem;display:flex;align-items:center}
+.about__info{display:grid;gap:.75rem;margin-top:var(--space)}
+.timeline{position:relative;display:grid;gap:var(--space);padding-left:1.5rem;border-left:1px solid var(--gold)}
+.logos{display:grid;grid-template-columns:repeat(auto-fit,minmax(6rem,1fr));gap:1rem;margin-top:var(--space)}
+.side-gif{max-width:14rem}
+.between{display:flex;justify-content:center;padding-block:var(--space)}
+.between decoration-slot{max-width:20rem}
+.footer{text-align:center;padding:4rem var(--space);border-top:1px solid rgba(212,175,55,.3);color:var(--muted)}
+.footer decoration-slot{max-width:14rem;margin:0 auto 1rem}
+.contact{display:flex;flex-wrap:wrap;gap:1rem;justify-content:center}
