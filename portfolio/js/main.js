@@ -25,7 +25,10 @@ $('inicio').innerHTML = `<div class="reveal is-visible">${slot(d.hero.photo, 'ph
 $('quem-sou').innerHTML = H('t-quem-sou', 'Prazer em conhecer', 'Quem Sou Eu') + `
  <div class="grid grid--about reveal"><div><div class="frame">${slot(d.about.photo, 'photo-slot', 'aspect-ratio="3/4"')}</div></div>
  <div><div class="about__text ${isPlaceholder(d.about.bio) ? 'editable-slot' : ''}">${isPlaceholder(d.about.bio) ? '<span class="badge">✏️ EDITE AQUI</span>' : ''}<p>${d.about.bio}</p></div>
- <dl class="about__info">${d.about.info.map(([k, v]) => `<div class="editable-slot"><span class="badge">✏️ EDITE AQUI</span><dt class="meta">${k}</dt><dd>${v}</dd></div>`).join('')}</dl>
+ <dl class="about__info">${d.about.info.map(([k, v]) => {
+  const p = isPlaceholder(v);
+  return `<div class="${p ? 'editable-slot' : 'card'}">${p ? '<span class="badge">✏️ EDITE AQUI</span>' : ''}<dt class="meta">${k}</dt><dd>${v}</dd></div>`;
+}).join('')}</dl>
  <div class="side-gif">${slot(d.about.gif, 'decoration-slot', 'aspect-ratio="1/1"')}</div></div></div>`;
 
 // SEÇÃO 2 — O Que Fiz
